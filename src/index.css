@@ -1,0 +1,22 @@
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+body{
+    font-family: Poppins;
+}
+
+.fs-12px{
+    font-size: 12px;
+}
+
+.fw-600{
+    font-weight: 600;
+}
+.h-60px{
+    height: 60px;
+}
+.active{
+    background-color: blue;
+}
