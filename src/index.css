@@ -18,5 +18,11 @@ body{
     height: 60px;
 }
 .active{
-    background-color: blue;
+    background-color: #1f7de96b;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.hover-bg:hover{
+    background-color: #1f7de96b;
 }

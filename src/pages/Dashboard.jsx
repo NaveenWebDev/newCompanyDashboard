@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import Navbar from './../components/Navbar';
 
-const Dashboard = () => {
+const Dashboard = ({children}) => {
   return (
     <div className="overflow-x-hidden">
       <div className="row overflow-hidden" style={{ height: "100vh" }}>
@@ -19,7 +19,8 @@ const Dashboard = () => {
 
           <main className="p-3" style={{height:"92%"}}>
               <div className="bg-white h-100 rounded-3">
-                main content
+                main content <br />
+                {children}
               </div>
           </main>
         </div>

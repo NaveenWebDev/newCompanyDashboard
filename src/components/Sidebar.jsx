@@ -13,6 +13,7 @@ import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
   const data = [
@@ -20,79 +21,81 @@ const Sidebar = () => {
       id: 1,
       icon: <DashboardIcon/>,
       value: "Dashboard",
-      route:"/dashboard"
+      path:"/"
     },
     {
       id: 2,
       icon: <CategoryIcon/>,
       value: "Department Mgmt",
-      route:"/department-mgmt"
+      path:"/department-mgmt"
     },
     {
       id: 3,
       icon: <PeopleAltIcon/>,
       value: "User Mgmt",
-      route:"/user-mgmt"
+      path:"/user-mgmt"
     },
     {
       id: 4,
       icon: <CurrencyRupeeIcon/>,
       value: "Budget Mgmt",
-      route:"/budget-mgmt"
+      path:"/budget-mgmt"
     },
     {
       id: 5,
       icon: <CheckCircleIcon/>,
       value: "Approval & payments",
-      route:"/approval-payments"
+      path:"/approval-payments"
     },
     {
       id: 6,
       icon: <RoomServiceIcon/>,
       value: "Vendor Services mgmt",
-      route:"/vendor-services-mgmt"
+      path:"/vendor-services-mgmt"
     },
     {
       id: 7,
       icon: <AddToHomeScreenIcon/>,
       value: "DBT/BULK?Nach Managment",
-      route:"/dbt"
+      path:"/dbt"
     },
     {
       id: 8,
       icon: <MonetizationOnIcon/>,
       value: "Payroll/Salary Mgmt",
-      route:"/payroll-salary"
+      path:"/payroll-salary"
     },
     {
       id: 9,
       icon: <WhatshotIcon/>,
       value: "Reconcilliation",
-      route:"/reconcilliatoin"
+      path:"/reconcilliatoin"
     },
     {
       id: 10,
       icon: <MeetingRoomIcon/>,
       value: "Depository",
-      route:"/depository"
+      path:"/depository"
     },
     {
       id: 11,
       icon: <PaymentIcon/>,
       value: "Print/payment/Advice",
-      route:"/print-payment"
+      path:"/print-payment"
     },
     {
       id: 12,
       icon: <ReportIcon/>,
       value: "Reports",
-      route:"/reports"
+      path:"/reports"
     },
-  
-
   ];
 
-  
+  const location = useLocation();
+
+  const matchRoute = (route) => {
+    return matchPath({ path: route }, location.pathname);
+  };
 
   return (
     <>
@@ -100,7 +103,7 @@ const Sidebar = () => {
 
         <div className="row border-bottom fs-12px fw-600 py-2 ps-4 h-60px">
 
-            <div className="col-2 d-flex justify-content-center align-items-center " >
+            <div className="col-2 d-flex justify-content-center align-items-center ">
                 <AcUnitIcon sx={{width:"35px", height:"35px"}} />
             </div>
 
@@ -115,10 +118,10 @@ const Sidebar = () => {
         <div className="col-12 overflow-auto"  >
           {
             data.map((val, ind)=>(
-              <div key={val?.id} className="row p-2 my-2">
+              <Link to={val?.path} key={val?.id} className={`row px-2 py-3 cursor-pointer hover-bg text-black text-decoration-none ${location.pathname === val?.path ? "active" : null}`}>
               <span className="col-3 d-flex justify-content-end pe-3 align-items-center"> {val?.icon} </span>
               <span className="col-9"> {val?.value} </span>
-              </div>
+              </Link>
             ))
           }
         </div>
