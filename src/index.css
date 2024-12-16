@@ -26,3 +26,9 @@ body{
 .hover-bg:hover{
     background-color: #1f7de96b;
 }
+.transition{
+    transition: all 0.5s;
+}
+.rotate{
+    rotate: 540deg;
+}

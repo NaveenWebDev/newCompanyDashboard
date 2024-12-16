@@ -1,25 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Navbar from './../components/Navbar';
 
 const Dashboard = ({children}) => {
+  const [menu, setMenu] = useState(null)
+
+  const setNavbarMenuValue = (value)=>{
+    setMenu(value)
+  }
+
   return (
     <div className="overflow-x-hidden">
       <div className="row overflow-hidden" style={{ height: "100vh" }}>
 
         <div
-          className="col-2 border top-0"
+          className={` ${menu? "col-2": "col-1"} border top-0 transition`}
           // style={{ height: "100vh" }}
         >
-          <Sidebar />
+          <Sidebar menu={menu} />
         </div>
 
-        <div className=" col-10" style={{background:"#f1f1f1"}}>
-          <Navbar/>
+        <div className={` ${menu?"col-10":"col-11"} transition`} style={{background:"#f1f1f1"}}>
+          <Navbar setNavbarMenuValue={setNavbarMenuValue}/>
 
           <main className="p-3" style={{height:"92%"}}>
-              <div className="bg-white h-100 rounded-3">
-                main content <br />
+              <div className="bg-white h-100 rounded-3 p-2">
                 {children}
               </div>
           </main>

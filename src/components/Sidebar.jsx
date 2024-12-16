@@ -15,7 +15,7 @@ import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
 import { Link, useLocation } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({menu}) => {
   const data = [
     {
       id: 1,
@@ -101,15 +101,18 @@ const Sidebar = () => {
     <>
       <div className="row">
 
-        <div className="row border-bottom fs-12px fw-600 py-2 ps-4 h-60px">
+        <div className="row border-bottom fs-12px fw-600 py-2 ps-4 h-60px overflow-hidden">
 
-            <div className="col-2 d-flex justify-content-center align-items-center ">
+            <div className={` ${menu?"col-2":"col-6 rotate"} d-flex justify-content-center align-items-center transition`}>
                 <AcUnitIcon sx={{width:"35px", height:"35px"}} />
             </div>
-
-          <div className="col-10 fw-600 fw-bold ps-2 d-flex align-items-center">
+          {
+            menu ?
+          <div className={`${menu?"opacity-1":"opacity-0"} col-10 fw-600 fw-bold ps-2 d-flex align-items-center`}>
             Uttarakhand Rural Road Development Authority
-          </div>
+          </div> :
+          null
+          }
 
         </div>
 
@@ -119,8 +122,11 @@ const Sidebar = () => {
           {
             data.map((val, ind)=>(
               <Link to={val?.path} key={val?.id} className={`row px-2 py-3 cursor-pointer hover-bg text-black text-decoration-none ${location.pathname === val?.path ? "active" : null}`}>
-              <span className="col-3 d-flex justify-content-end pe-3 align-items-center"> {val?.icon} </span>
-              <span className="col-9"> {val?.value} </span>
+              <span className={` ${menu? "col-3": " col-9"} d-flex justify-content-end pe-3 align-items-center`}> {val?.icon} </span>
+              {
+              menu && <span className="col-9"> {val?.value} </span>
+              } 
+                
               </Link>
             ))
           }
