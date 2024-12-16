@@ -93,10 +93,6 @@ const Sidebar = ({menu}) => {
 
   const location = useLocation();
 
-  const matchRoute = (route) => {
-    return matchPath({ path: route }, location.pathname);
-  };
-
   return (
     <>
       <div className="row">
