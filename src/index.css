@@ -10,7 +10,9 @@ body{
 .fs-12px{
     font-size: 12px;
 }
-
+.fs-14px{
+    font-size: 14px;
+}
 .fw-600{
     font-weight: 600;
 }
@@ -30,5 +32,8 @@ body{
     transition: all 0.5s;
 }
 .rotate{
-    rotate: 180deg;
+    rotate: -180deg;
+}
+.gap-8px{
+    gap: 8px;
 }

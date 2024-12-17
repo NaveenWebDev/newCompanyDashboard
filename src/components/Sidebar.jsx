@@ -1,93 +1,93 @@
 import React from "react";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
-import ReportIcon from '@mui/icons-material/Report';
-import PaymentIcon from '@mui/icons-material/Payment';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import CategoryIcon from '@mui/icons-material/Category';
-import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import RoomServiceIcon from '@mui/icons-material/RoomService';
-MeetingRoomIcon
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import WhatshotIcon from '@mui/icons-material/Whatshot';
-import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
-import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
+import ReportIcon from "@mui/icons-material/Report";
+import PaymentIcon from "@mui/icons-material/Payment";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import CategoryIcon from "@mui/icons-material/Category";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import RoomServiceIcon from "@mui/icons-material/RoomService";
+MeetingRoomIcon;
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import WhatshotIcon from "@mui/icons-material/Whatshot";
+import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
+import AddToHomeScreenIcon from "@mui/icons-material/AddToHomeScreen";
 import { Link, useLocation } from "react-router-dom";
 
-const Sidebar = ({menu}) => {
+const Sidebar = ({ menu }) => {
   const data = [
     {
       id: 1,
-      icon: <DashboardIcon/>,
+      icon: <DashboardIcon style={{ height: "20px", width: "20px" }} />,
       value: "Dashboard",
-      path:"/"
+      path: "/",
     },
     {
       id: 2,
-      icon: <CategoryIcon/>,
+      icon: <CategoryIcon style={{ height: "20px", width: "20px" }} />,
       value: "Department Mgmt",
-      path:"/department-mgmt"
+      path: "/department-mgmt",
     },
     {
       id: 3,
-      icon: <PeopleAltIcon/>,
+      icon: <PeopleAltIcon style={{ height: "20px", width: "20px" }} />,
       value: "User Mgmt",
-      path:"/user-mgmt"
+      path: "/user-mgmt",
     },
     {
       id: 4,
-      icon: <CurrencyRupeeIcon/>,
+      icon: <CurrencyRupeeIcon style={{ height: "20px", width: "20px" }} />,
       value: "Budget Mgmt",
-      path:"/budget-mgmt"
+      path: "/budget-mgmt",
     },
     {
       id: 5,
-      icon: <CheckCircleIcon/>,
+      icon: <CheckCircleIcon style={{ height: "20px", width: "20px" }} />,
       value: "Approval & payments",
-      path:"/approval-payments"
+      path: "/approval-payments",
     },
     {
       id: 6,
-      icon: <RoomServiceIcon/>,
+      icon: <RoomServiceIcon style={{ height: "20px", width: "20px" }} />,
       value: "Vendor Services mgmt",
-      path:"/vendor-services-mgmt"
+      path: "/vendor-services-mgmt",
     },
     {
       id: 7,
-      icon: <AddToHomeScreenIcon/>,
+      icon: <AddToHomeScreenIcon style={{ height: "20px", width: "20px" }} />,
       value: "DBT/BULK?Nach Managment",
-      path:"/dbt"
+      path: "/dbt",
     },
     {
       id: 8,
-      icon: <MonetizationOnIcon/>,
+      icon: <MonetizationOnIcon style={{ height: "20px", width: "20px" }} />,
       value: "Payroll/Salary Mgmt",
-      path:"/payroll-salary"
+      path: "/payroll-salary",
     },
     {
       id: 9,
-      icon: <WhatshotIcon/>,
+      icon: <WhatshotIcon style={{ height: "20px", width: "20px" }} />,
       value: "Reconcilliation",
-      path:"/reconcilliatoin"
+      path: "/reconcilliatoin",
     },
     {
       id: 10,
-      icon: <MeetingRoomIcon/>,
+      icon: <MeetingRoomIcon style={{ height: "20px", width: "20px" }} />,
       value: "Depository",
-      path:"/depository"
+      path: "/depository",
     },
     {
       id: 11,
-      icon: <PaymentIcon/>,
+      icon: <PaymentIcon style={{ height: "20px", width: "20px" }} />,
       value: "Print/payment/Advice",
-      path:"/print-payment"
+      path: "/print-payment",
     },
     {
       id: 12,
-      icon: <ReportIcon/>,
+      icon: <ReportIcon style={{ height: "20px", width: "20px" }} />,
       value: "Reports",
-      path:"/reports"
+      path: "/reports",
     },
   ];
 
@@ -95,37 +95,46 @@ const Sidebar = ({menu}) => {
 
   return (
     <>
-      <div className="row">
-
-        <div className="row border-bottom fs-12px fw-600 py-2 ps-4 h-60px overflow-hidden">
-
-            <div className={` ${menu?"col-2":"col-6 rotate"} d-flex justify-content-center align-items-center transition`}>
-                <AcUnitIcon sx={{width:"35px", height:"35px"}} />
+      <div className="border">
+        <div className="d-flex gap-8px justify-content-center px-3 border-bottom fs-12px fw-600 h-60px overflow-hidden">
+          <div
+            className={`d-flex justify-content-center align-items-center`}
+          >
+            <AcUnitIcon sx={{ width: "35.1px", height: "36px" }} />
+          </div>
+          {menu && (
+            <div
+              className={`${
+                menu ? "opacity-1" : "opacity-0"
+              } col-10 fw-600 fw-bold d-flex align-items-center`}
+            >
+              Uttarakhand Rural Road Development Authority
             </div>
-          {
-            menu ?
-          <div className={`${menu?"opacity-1":"opacity-0"} col-10 fw-600 fw-bold ps-2 d-flex align-items-center`}>
-            Uttarakhand Rural Road Development Authority
-          </div> :
-          null
-          }
-
+          ) }
         </div>
-
       </div>
-      <div className="row overflow-auto" style={{height:"92vh"}}>
-        <div className="col-12 overflow-auto"  >
-          {
-            data.map((val, ind)=>(
-              <Link to={val?.path} key={val?.id} className={`row px-2 py-3 cursor-pointer hover-bg text-black text-decoration-none ${location.pathname === val?.path ? "active" : null}`}>
-              <span className={` ${menu? "col-3": " col-9"} d-flex justify-content-end pe-3 align-items-center`}> {val?.icon} </span>
-              {
-              menu && <span className="col-9"> {val?.value} </span>
-              } 
-                
-              </Link>
-            ))
-          }
+
+      <div
+        className="overflow-auto"
+        style={{ height: "92vh" }}
+      >
+        <div className="overflow-auto w-100">
+          {data.map((val, ind) => (
+            <Link
+              to={val?.path}
+              key={val?.id}
+              className={`d-flex gap-8px justify-content-center px-2 py-3 cursor-pointer hover-bg text-black text-decoration-none ${
+                location.pathname === val?.path ? "active" : null
+              }`}
+            >
+              <span
+                className={`d-flex justify-content-end align-items-center`}
+              >
+                {val?.icon}
+              </span>
+              {menu && <span className="col-9 fs-14px"> {val?.value} </span>}
+            </Link>
+          ))}
         </div>
       </div>
     </>

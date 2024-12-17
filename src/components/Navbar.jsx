@@ -15,7 +15,7 @@ import Fade from "@mui/material/Fade";
 const Navbar = ({ setNavbarMenuValue }) => {
   const [hamberger, setHamberger] = useState(true);
   const [dropdownValue, setDropdownValue] = useState("Username");
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
