@@ -20,13 +20,10 @@ body{
     height: 60px;
 }
 .active{
-    background-color: #1f7de96b;
+    background-color: #28326F;
 }
 .cursor-pointer{
     cursor: pointer;
-}
-.hover-bg:hover{
-    background-color: #1f7de96b;
 }
 .transition{
     transition: all 0.5s;
@@ -36,4 +33,39 @@ body{
 }
 .gap-8px{
     gap: 8px;
+}
+.pxy{
+  padding: 12px 20px !important;
+}
+
+/* ====================submenu css==================== */
+  
+.menu a {
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #CED8E1;
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out,padding 0.5s ease-out;
+}
+
+.submenu.open {
+  max-height: 300px;
+  padding: 4px 0;
+}
+
+.submenu li a {
+  display: block;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+}
+
+.submenu li a:hover {
+  color: #0d6efd;
+  text-decoration: underline;
 }

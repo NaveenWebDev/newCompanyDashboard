@@ -35,7 +35,7 @@ const Navbar = ({ setNavbarMenuValue }) => {
 
   return (
     <>
-      <nav className="border-bottom p-2 h-60px d-flex justify-content-between align-items-center bg-white">
+      <nav className="border-bottom pxy h-60px d-flex justify-content-between align-items-center bg-white">
         <div className="d-flex gap-3 align-items-center ">
           <div className={`${hamberger ? null : "rotate"} transition`}>
             <i className="icon-first_page fs-4 cursor-pointer" onClick={() => setHamberger((prev) => !prev)}></i>

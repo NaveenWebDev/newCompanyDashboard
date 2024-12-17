@@ -64,7 +64,7 @@ const data = [
   {
     id: 9,
     value: "Reconcilliation",
-    path:"/reconcilliatoin"
+    path:"/reconciliation"
   },
   {
     id: 10,

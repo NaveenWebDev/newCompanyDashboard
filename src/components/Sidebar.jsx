@@ -1,22 +1,17 @@
-import React from "react";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
-import ReportIcon from "@mui/icons-material/Report";
-import PaymentIcon from "@mui/icons-material/Payment";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import CategoryIcon from "@mui/icons-material/Category";
-import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
-import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import RoomServiceIcon from "@mui/icons-material/RoomService";
-MeetingRoomIcon;
-import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
-import WhatshotIcon from "@mui/icons-material/Whatshot";
-import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
-import AddToHomeScreenIcon from "@mui/icons-material/AddToHomeScreen";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import AcUnitIcon from "@mui/icons-material/AcUnit";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const Sidebar = ({ menu }) => {
-  
+  const location = useLocation();
+  const [openSubmenu, setOpenSubmenu] = useState(null);
+
+  const handleSubmenuToggle = (id) => {
+    setOpenSubmenu(openSubmenu === id ? null : id);
+  };
+
   const data = [
     {
       id: 1,
@@ -27,118 +22,197 @@ const Sidebar = ({ menu }) => {
     {
       id: 2,
       icon: <i className="icon-category fs-5"></i>,
-      value: "Department Mgmt",
+      value: "Department",
       path: "/department-mgmt",
+      submenu: [
+        { id: 1, value: "Department" },
+        { id: 2, value: "Child Band Account" },
+        { id: 3, value: "Child Schema Band Account mapping" },
+      ],
     },
     {
       id: 3,
       icon: <i className="icon-supervised_user_circle fs-5"></i>,
-      value: "User Mgmt",
+      value: "User",
       path: "/user-mgmt",
     },
     {
       id: 4,
       icon: <i className="icon-work_outline fs-5"></i>,
-      value: "Budget Mgmt",
+      value: "Budget",
       path: "/budget-mgmt",
+      submenu: [
+        { id: 1, value: "Schemes" },
+        { id: 2, value: "Budgets" },
+        { id: 3, value: "Revision Budgets & Limit Allocatoin" },
+        { id: 4, value: "Child budget Limit Allocation" },
+        { id: 5, value: "Budget Activity" },
+        { id: 6, value: "Budget Sub Activity" },
+      ],
     },
     {
       id: 5,
       icon: <i className="icon-playlist_add_check fs-5"></i>,
-      value: "Approval & payments",
+      value: "Approval & Payments",
       path: "/approval-payments",
+      submenu:[
+        {id:1, value:"Invoices"},
+        {id:2, value:"DBT Bulk Nach"},
+        {id:3, value:"Payroll Salary"},
+        {id:4, value:"Child budget Limit Allocatoin"},
+        {id:5, value:"Royality & Labour Cess"},
+      ]
     },
     {
       id: 6,
       icon: <i className="icon-store fs-5"></i>,
-      value: "Vendor Services mgmt",
+      value: "Vendor Services",
       path: "/vendor-services-mgmt",
+      submenu:[
+        {id:1, value:"Vendor Contract Service Provider"},
+        {id:2, value:"Vendor Contract Service Payments"},
+        {id:3, value:"Payments Deduction"},
+      ]
     },
     {
       id: 7,
       icon: <i className="icon-nature_people fs-5"></i>,
-      value: "DBT/BULK?Nach Managment",
+      value: "DBT BULK/Nach",
       path: "/dbt",
     },
     {
       id: 8,
       icon: <i className="icon-assignment_turned_in fs-5"></i>,
-      value: "Payroll/Salary Mgmt",
+      value: "Payroll Salary",
       path: "/payroll-salary",
     },
     {
       id: 9,
       icon: <i className="icon-emoji_flags fs-5"></i>,
-      value: "Reconcilliation",
-      path: "/reconcilliatoin",
+      value: "Reconciliation",
+      path: "/reconciliation",
+      submenu:[
+        {id:1, value:"OTHER-DEDUCTIONS"},
+        {id:2, value:"IFMS Intrest Challans"},
+        {id:3, value:"Royality"},
+      ]
     },
     {
       id: 10,
       icon: <i className="icon-save_alt fs-5"></i>,
       value: "Depository",
       path: "/depository",
+      submenu:[
+        {id:1, value:"Add depository"},
+        {id:2, value:"Depository"},
+      ]
     },
     {
       id: 11,
       icon: <i className="icon-local_printshop fs-5"></i>,
-      value: "Print/payment/Advice",
+      value: "Print Payment Advice",
       path: "/print-payment",
+      submenu:[
+        {id:1, value:"List Print Payment Advice"},
+      ]
     },
     {
       id: 12,
       icon: <i className="icon-assignment fs-5"></i>,
       value: "Reports",
       path: "/reports",
+      submenu:[
+        {id:1, value:"Scheme Balance"},
+        {id:2, value:"Budgets"},
+        {id:3, value:"Revised Budgets"},
+        {id:4, value:"Scheme Subheads"},
+        {id:4, value:"Scheme Activity & Sub Activity"},
+        {id:4, value:"Child budget Limit Allocation"},
+        {id:4, value:"Utilization Certificate"},
+        {id:4, value:"MPR-Monthly Progree Report"},
+        {id:4, value:"Vendor Conract Service Providor"},
+        {id:4, value:"Payment DBT Bulk NACH"},
+        {id:4, value:"Payment Payroll Salary"},
+        {id:4, value:"Payment Invoices"},
+        {id:4, value:"Payment Ryality"},
+        {id:4, value:"Payment Payment Labour Cess"},
+        {id:4, value:"Payment Withheld amount"},
+        {id:4, value:"TDS-IT"},
+        {id:4, value:"TDS-GST"},
+        {id:4, value:"GIS"},
+        {id:4, value:"NPS"},
+        {id:4, value:"Royality"},
+        {id:4, value:"Labour Cess"},
+        {id:4, value:"Other deductions"},
+        {id:4, value:"Penality"},
+        {id:4, value:"Withheld amount"},
+        {id:4, value:"Bank Account Intrest"},
+      ]
     },
   ];
 
-  const location = useLocation();
-
   return (
-    <>
-      <div className="border">
-        <div className="d-flex gap-8px justify-content-center px-3 border-bottom fs-12px fw-600 h-60px overflow-hidden">
-          <div
-            className={`d-flex justify-content-center align-items-center`}
-          >
-            <AcUnitIcon sx={{ width: "35.1px", height: "36px" }} />
-          </div>
-          {menu && (
-            <div
-              className={`${
-                menu ? "opacity-1" : "opacity-0"
-              } col-10 fw-600 fw-bold d-flex align-items-center`}
-            >
-              Uttarakhand Rural Road Development Authority
-            </div>
-          ) }
-        </div>
+    <div style={{ height: "100vh" }}>
+      {/* Header */}
+      <div className="d-flex h-60px justify-content-center align-items-center gap-8px pxy border-bottom">
+        <AcUnitIcon sx={{ fontSize: "26px" }} />
+        {menu && (
+          <span className="fw-600 fs-12px">
+            Uttarakhand Rural Road Development Authority
+          </span>
+        )}
       </div>
 
-      <div
-        className="overflow-auto"
-        style={{ height: "92vh" }}
-      >
-        <div className="overflow-auto w-100">
-          {data.map((val, ind) => (
+      {/* Menu Items */}
+      <div className="menu overflow-auto" style={{ height: "calc(100% - 60px)" }}>
+        {data.map((item) => (
+          <div key={item?.id}>
+            {/* Main Menu */}
             <Link
-              to={val?.path}
-              key={val?.id}
-              className={`d-flex gap-8px justify-content-center px-2 py-3 cursor-pointer hover-bg text-black text-decoration-none ${
-                location.pathname === val?.path ? "active" : null
+              to={item.path}
+              className={`d-flex gap-8px justify-content-center align-items-center pxy cursor-pointer text-decoration-none ${
+                location.pathname === item?.path ? "active text-white" : "text-dark"
+              }`}
+              onClick={() => item?.submenu && handleSubmenuToggle(item?.id)}
+            >
+              <span>{item?.icon}</span>
+              {
+
+              menu && <span className="flex-grow-1 fs-14px">{item?.value}</span>
+              }
+              {item?.submenu && (
+                <span>
+                  {openSubmenu === item?.id ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
+                </span>
+              )}
+            </Link>
+
+            {/* Submenu */}
+            <ul
+              className={`submenu list-unstyled ${
+                openSubmenu === item.id ? "open" : ""
               }`}
             >
-              <span
-                className={`d-flex justify-content-end align-items-center`}
-              >
-                {val?.icon}
-              </span>
-              {menu && <span className="col-9 fs-14px"> {val?.value} </span>}
-            </Link>
-          ))}
-        </div>
+              {item.submenu &&
+                item.submenu.map((sub) => (
+                  <li key={sub?.id} className="">
+                    <Link
+                      to={`${item?.path}/${sub.id}`}
+                      className={`text-decoration-none fs-14px pxy ${
+                        location.pathname.includes(`${item?.path}/${sub?.id}`)
+                          ? "text-primary fw-bold"
+                          : "text-secondary"
+                      }`}
+                    >
+                      {sub?.value}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
