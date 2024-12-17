@@ -164,7 +164,7 @@ const Sidebar = ({ menu }) => {
       </div>
 
       {/* Menu Items */}
-      <div className="menu overflow-auto" style={{ height: "calc(100% - 60px)" }}>
+      <div className="menu overflow-auto pb-4" style={{ height: "calc(100% - 60px)" }}>
         {data.map((item) => (
           <div key={item?.id}>
             {/* Main Menu */}
