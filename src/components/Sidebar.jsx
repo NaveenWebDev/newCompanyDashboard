@@ -157,7 +157,7 @@ const Sidebar = ({ menu }) => {
       <div className="d-flex h-60px justify-content-center align-items-center gap-8px pxy border-bottom">
         <AcUnitIcon sx={{ fontSize: "26px" }} />
         {menu && (
-          <span className="fw-600 fs-12px">
+          <span className="fw-600 fs-12px text-black">
             Uttarakhand Rural Road Development Authority
           </span>
         )}
@@ -171,14 +171,13 @@ const Sidebar = ({ menu }) => {
             <Link
               to={item.path}
               className={`d-flex gap-8px justify-content-center align-items-center pxy cursor-pointer text-decoration-none ${
-                location.pathname === item?.path ? "active text-white" : "text-dark"
+                location.pathname === item?.path ? "active text-white" : "text-black"
               }`}
               onClick={() => item?.submenu && handleSubmenuToggle(item?.id)}
             >
               <span>{item?.icon}</span>
               {
-
-              menu && <span className="flex-grow-1 fs-14px">{item?.value}</span>
+              menu && <span className="flex-grow-1 fs-14px  ">{item?.value}</span>
               }
               {item?.submenu && (
                 <span>
@@ -190,7 +189,7 @@ const Sidebar = ({ menu }) => {
             {/* Submenu */}
             <ul
               className={`submenu list-unstyled ${
-                openSubmenu === item.id ? "open" : ""
+                openSubmenu === item?.id ? "open" : ""
               }`}
             >
               {item.submenu &&
