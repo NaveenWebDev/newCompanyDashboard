@@ -38,15 +38,7 @@ const Navbar = ({ setNavbarMenuValue }) => {
       <nav className="border-bottom p-2 h-60px d-flex justify-content-between align-items-center bg-white">
         <div className="d-flex gap-3 align-items-center ">
           <div className={`${hamberger ? null : "rotate"} transition`}>
-            <IconButton
-              aria-label="menu"
-              sx={{ width: "40px", height: "40px" }}
-              onClick={() => setHamberger((prev) => !prev)}
-            >
-              <MenuOpenIcon
-                sx={{ width: "30px", height: "30px", color: "black" }}
-              />
-            </IconButton>
+            <i className="icon-first_page fs-4 cursor-pointer" onClick={() => setHamberger((prev) => !prev)}></i>
           </div>
 
           <span
@@ -58,22 +50,17 @@ const Navbar = ({ setNavbarMenuValue }) => {
             </IconButton>
             <InputBase sx={{ ml: 1, flex: 1 }} placeholder="search scheme" />
           </span>
+            
+            
+            
         </div>
 
         <p className="fw-medium"> SNA - Financial Management System</p>
 
         <div className="d-flex gap-4 align-items-center">
 
-          <IconButton sx={{height:"40px", width:"40px"}}>
-          <AssignmentIcon className="cursor-pointer text-black" />
-          </IconButton>
-
-          <IconButton sx={{height:"40px", width:"40px"}}>
-          <NotificationsNoneOutlinedIcon
-            className="cursor-pointer text-black"
-            onClick={handleClick}
-          />
-          </IconButton>
+        <i className="icon-assignment cursor-pointer fs-5"></i>
+        <i className="icon-notifications_none cursor-pointer fs-5" onClick={handleClick}></i>
 
           <Dropdown onSelect={handleDropdownSelect}>
             <Dropdown.Toggle

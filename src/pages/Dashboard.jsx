@@ -15,7 +15,6 @@ const Dashboard = ({children}) => {
 
         <div
           className={` ${menu? "col-2": "col-1"} border top-0 transition`}
-          // style={{ height: "100vh" }}
         >
           <Sidebar menu={menu} />
         </div>

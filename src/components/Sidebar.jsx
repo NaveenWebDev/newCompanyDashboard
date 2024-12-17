@@ -16,76 +16,77 @@ import AddToHomeScreenIcon from "@mui/icons-material/AddToHomeScreen";
 import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = ({ menu }) => {
+  
   const data = [
     {
       id: 1,
-      icon: <DashboardIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-dashboard fs-5"></i>,
       value: "Dashboard",
       path: "/",
     },
     {
       id: 2,
-      icon: <CategoryIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-category fs-5"></i>,
       value: "Department Mgmt",
       path: "/department-mgmt",
     },
     {
       id: 3,
-      icon: <PeopleAltIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-supervised_user_circle fs-5"></i>,
       value: "User Mgmt",
       path: "/user-mgmt",
     },
     {
       id: 4,
-      icon: <CurrencyRupeeIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-work_outline fs-5"></i>,
       value: "Budget Mgmt",
       path: "/budget-mgmt",
     },
     {
       id: 5,
-      icon: <CheckCircleIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-playlist_add_check fs-5"></i>,
       value: "Approval & payments",
       path: "/approval-payments",
     },
     {
       id: 6,
-      icon: <RoomServiceIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-store fs-5"></i>,
       value: "Vendor Services mgmt",
       path: "/vendor-services-mgmt",
     },
     {
       id: 7,
-      icon: <AddToHomeScreenIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-nature_people fs-5"></i>,
       value: "DBT/BULK?Nach Managment",
       path: "/dbt",
     },
     {
       id: 8,
-      icon: <MonetizationOnIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-assignment_turned_in fs-5"></i>,
       value: "Payroll/Salary Mgmt",
       path: "/payroll-salary",
     },
     {
       id: 9,
-      icon: <WhatshotIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-emoji_flags fs-5"></i>,
       value: "Reconcilliation",
       path: "/reconcilliatoin",
     },
     {
       id: 10,
-      icon: <MeetingRoomIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-save_alt fs-5"></i>,
       value: "Depository",
       path: "/depository",
     },
     {
       id: 11,
-      icon: <PaymentIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-local_printshop fs-5"></i>,
       value: "Print/payment/Advice",
       path: "/print-payment",
     },
     {
       id: 12,
-      icon: <ReportIcon style={{ height: "20px", width: "20px" }} />,
+      icon: <i className="icon-assignment fs-5"></i>,
       value: "Reports",
       path: "/reports",
     },

@@ -3,6 +3,8 @@ import {Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import DashboardData from './components/DashboardData';
 
+import "./assets/icons.css"
+
 const App = () => {
   return (
       <Routes>
