@@ -13,6 +13,10 @@ const App = () => {
         <Route key={val?.id} path={val?.path} element={<Dashboard> {val?.value} </Dashboard>} />
           ))
         }
+        <Route path='/department-mgmt/1' element={<Dashboard> submenu 1</Dashboard> } /> 
+        <Route path='/department-mgmt/2' element={<Dashboard> submenu 2 </Dashboard> } /> 
+        <Route path='/department-mgmt/3' element={<Dashboard> submenu 3 </Dashboard> } /> 
+        <Route path='/department-mgmt/4' element={<Dashboard> submenu 4</Dashboard> } /> 
         <Route path="*" element={<h2>page not fount</h2>} />
       </Routes>
   );

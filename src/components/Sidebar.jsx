@@ -82,10 +82,10 @@ const Sidebar = ({ menu }) => {
                     <li key={sub?.id} >
                       <Link
                         to={`${item?.path}/${sub.id}`}
-                        className={`text-decoration-none fs-14px pxy hover-link ${
+                        className={`text-decoration-none fs-14px pxy ${
                           location.pathname.includes(`${item?.path}/${sub?.id}`)
-                            ? "text-primary fw-bold"
-                            : "text-secondary"
+                            ? "bg-secondary-100 text-white"
+                            : "text-black"
                         }`}
                       >
                         {sub?.value}
@@ -116,9 +116,9 @@ const data = [
     value: "Department",
     path: "/department-mgmt",
     submenu: [
-      { id: 1, value: "Department" },
-      { id: 2, value: "Child Band Account" },
-      { id: 3, value: "Child Schema Band Account mapping" },
+      { id: 1, value: "Department", path:"department-mgmt/1" },
+      { id: 2, value: "Child Band Account", path:"department-mgmt/2" },
+      { id: 3, value: "Child Schema Band Account mapping", path:"department-mgmt/3"  },
     ],
   },
   {
