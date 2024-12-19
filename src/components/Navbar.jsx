@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
-import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-import AssignmentIcon from "@mui/icons-material/Assignment";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import Dropdown from "react-bootstrap/Dropdown";
-import Avatar from "@mui/material/Avatar";
 
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -35,44 +31,40 @@ const Navbar = ({ setNavbarMenuValue }) => {
 
   return (
     <>
-      <nav className="border-bottom pxy h-60px d-flex justify-content-between align-items-center bg-white">
+      <nav className="border-bottom pxy h-60px d-flex justify-content-between align-items-center bg-secondary-100">
         <div className="d-flex gap-3 align-items-center ">
           <div className={`${hamberger ? null : "rotate"} transition`}>
-            <i className="icon-first_page fs-4 cursor-pointer" onClick={() => setHamberger((prev) => !prev)}></i>
+            <i className="icon-first_page fs-4 cursor-pointer text-white" onClick={() => setHamberger((prev) => !prev)}></i>
           </div>
 
           <span
             style={{ border: "2px solid #ebebeb" }}
             className="p-2 rounded-3 d-flex justify-content-center align-items-center"
           >
-            <IconButton type="button" sx={{ p: "15px" }} aria-label="search">
-              <SearchIcon />
-            </IconButton>
-            <InputBase sx={{ ml: 1, flex: 1 }} placeholder="search scheme" />
+              <SearchIcon className="text-white" />
+            <InputBase sx={{ ml: 1, flex: 1 }} className="text-white" placeholder="search scheme" />
           </span>
-            
-            
             
         </div>
 
-        <p className="fw-medium"> SNA - Financial Management System</p>
+        <p className="fw-medium text-white"> SNA - Financial Management System</p>
 
         <div className="d-flex gap-4 align-items-center">
 
-        <i className="icon-assignment cursor-pointer fs-5"></i>
-        <i className="icon-notifications_none cursor-pointer fs-5" onClick={handleClick}></i>
+        <i className="icon-assignment cursor-pointer fs-5 text-white"></i>
+        <i className="icon-notifications_none cursor-pointer transition fs-5 p-2 text-prime-100 rounded-8px bg-prime-20-hover" onClick={handleClick}></i>
 
           <Dropdown onSelect={handleDropdownSelect}>
             <Dropdown.Toggle
               id="dropdown-basic"
-              className="bg-white text-black py-1 px-2 d-flex align-items-center gap-3"
-              style={{ border: "3px solid #333" }}
+              className="text-white py-1 px-2 d-flex align-items-center gap-3 bg-transparent"
+              style={{ border: "1px solid #fff" }}
             >
-              <Avatar
+              {/* <Avatar
                 alt="Travis Howard"
                 src=""
                 sx={{ height: "30px", width: "30px" }}
-              />
+              /> */}
               <span>{dropdownValue}</span>
             </Dropdown.Toggle>
 
