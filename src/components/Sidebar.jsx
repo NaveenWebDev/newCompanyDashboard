@@ -72,12 +72,12 @@ const Sidebar = ({ menu }) => {
             </Link>
 
             {/* Submenu */}
-            {/* {item.submenu &&  ( */}
+            {item.submenu && (
               <ul
-                className={`submenu list-unstyled pb-2`}
+                className={`submenu list-unstyled  pb-2 ${openSubmenu !== item.id?"d-none":null}`}
                 ref={(el) => (submenuRefs.current[item?.id] = el)}
               >
-                {item.submenu &&
+                {item.submenu && 
                   item.submenu.map((sub) => (
                     <li key={sub?.id} >
                       <Link
@@ -93,7 +93,7 @@ const Sidebar = ({ menu }) => {
                     </li>
                   ))}
               </ul>
-            {/* )} */}
+            )}
           </div>
         ))}
       </div>
