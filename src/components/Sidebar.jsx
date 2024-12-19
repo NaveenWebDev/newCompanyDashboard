@@ -85,7 +85,7 @@ const Sidebar = ({ menu }) => {
                         className={`text-decoration-none fs-14px pxy ${
                           location.pathname.includes(`${item?.path}/${sub?.id}`)
                             ? "bg-secondary-100 text-white"
-                            : "text-black"
+                            : "text-black hover-link"
                         }`}
                       >
                         {sub?.value}
