@@ -7,7 +7,7 @@ const DashboardData = () => {
         <div>
           <h2 className="fs-20px">
             Dashboard - Financial Year{" "}
-            <span className="text-prime-100 fs-20px text-decoration-underline">
+            <span className="text-prime-100 fs-20px text-decoration-underline cursor-pointer">
               2024-2025 <i className="icon-expand_more"></i>{" "}
             </span>{" "}
           </h2>
@@ -27,9 +27,9 @@ const DashboardData = () => {
         <div className="col-9">
           <div className="row">
             <div className="col-4 p-2">
-              <div className="d-flex rounded-2 flex-column bg-white justify-content-between h-100">
+              <div className="d-flex rounded-2 flex-column bg-white justify-content-between h-100  box-shadow">
                 <div className="bg-success-100 border-radius-t8px py-2 px-3 text-white d-flex justify-content-between a;ogm-items-center">
-                  <span>Scheme Budget </span>
+                  <span>Heading here </span>
                   <span>
                     <i className="icon-open_in_new"></i>
                   </span>
@@ -190,7 +190,9 @@ const DashboardData = () => {
               </div>
             </div>
 
+
           </div>
+            <br />
         </div>
 
         <div className="col-3">
@@ -258,19 +260,24 @@ const DashboardData = () => {
               </div>
 
               <div className="row">
-                <div className="bottom border-top-black-10 col-6 p-2 bg-success-20">
+                <div className="bottom border-top-black-10 col-6 p-2 bg-success-20 d-flex justify-content-between align-items-center">  
+                  <span>
                   <p className="text-success-100 text-black-60 fs-12px">
-                    {" "}
                     Action (L2)
                   </p>
                   <span className="text-black fw-500"> Approved</span>
+                  </span>
+                  <i className="icon-verified "></i>
                 </div>
-                <div className="bottom border-top-black-10 col-6 p-2 bg-warning-20">
+                <div className="bottom border-top-black-10 col-6 p-2 bg-warning-20 d-flex justify-content-between align-items-center">
+                <span>
                   <p className="text-success-100 text-black-60 fs-12px">
-                    {" "}
                     Action (L3)
                   </p>
                   <span className="text-black fw-500"> Waiting </span>
+                </span>
+
+                  <i className="icon-warning text-warning-success-100"></i>
                 </div>
               </div>
             </div>

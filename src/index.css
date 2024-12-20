@@ -77,6 +77,9 @@ body{
 .text-success-100{
     color: var(--success-100-color);
 }
+.text-warning-success-100{
+    color: var(--warning-100-color);
+}
 .cursor-pointer{
     cursor: pointer;
 }
