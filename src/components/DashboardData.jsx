@@ -34,7 +34,7 @@ const DashboardData = () => {
                     <i className="icon-open_in_new"></i>
                   </span>
                 </div>
-                <div className="mid p-1">
+                <div className="mid p-2">
                   <p className="text-black-60 fs-12px">Provisioned Budget</p>
                   <span className="fw-600">0</span>
                   <p className="text-black-60 fs-12px">Released Budget</p>
@@ -42,7 +42,7 @@ const DashboardData = () => {
                   <p className="text-black-60 fs-12px">Prev. Year Balance</p>
                   <span className="fw-600">2,0</span>
                 </div>
-                <div className="bottom border-top-black-10 row p-1">
+                <div className="bottom border-top-black-10 row p-2">
                   <span className="text-success-100 col-12"> Total Budget</span>
                   <span className="text-black"> 2,000,000.0 </span>
                 </div>
@@ -56,7 +56,7 @@ const DashboardData = () => {
                     <i className="icon-open_in_new"></i>
                   </span>
                 </div>
-                <div className="mid p-1">
+                <div className="mid p-2">
                   <p className="text-black-60 fs-12px">Provisioned Budget</p>
                   <span className="fw-600">0</span>
                   <p className="text-black-60 fs-12px">Released Budget</p>
@@ -64,7 +64,7 @@ const DashboardData = () => {
                   <p className="text-black-60 fs-12px">Prev. Year Balance</p>
                   <span className="fw-600">2,0</span>
                 </div>
-                <div className="bottom border-top-black-10 row p-1">
+                <div className="bottom border-top-black-10 row p-2">
                   <span className="text-success-100 col-12"> Total Budget</span>
                   <span className="text-black"> 2,000,000.0 </span>
                 </div>
@@ -78,7 +78,7 @@ const DashboardData = () => {
                     <i className="icon-open_in_new"></i>
                   </span>
                 </div>
-                <div className="mid p-1">
+                <div className="mid p-2">
                   <p className="text-black-60 fs-12px">Provisioned Budget</p>
                   <span className="fw-600">0</span>
                   <p className="text-black-60 fs-12px">Released Budget</p>
@@ -86,7 +86,7 @@ const DashboardData = () => {
                   <p className="text-black-60 fs-12px">Prev. Year Balance</p>
                   <span className="fw-600">2,0</span>
                 </div>
-                <div className="bottom border-top-black-10 row p-1">
+                <div className="bottom border-top-black-10 row p-2">
                   <span className="text-success-100 col-12"> Total Budget</span>
                   <span className="text-black"> 2,000,000.0 </span>
                 </div>
@@ -100,7 +100,7 @@ const DashboardData = () => {
                     <i className="icon-open_in_new"></i>
                   </span>
                 </div>
-                <div className="mid p-1">
+                <div className="mid p-2">
                   <p className="text-black-60 fs-12px">Provisioned Budget</p>
                   <span className="fw-600">0</span>
                   <p className="text-black-60 fs-12px">Released Budget</p>
@@ -108,7 +108,7 @@ const DashboardData = () => {
                   <p className="text-black-60 fs-12px">Prev. Year Balance</p>
                   <span className="fw-600">2,0</span>
                 </div>
-                <div className="bottom border-top-black-10 row p-1">
+                <div className="bottom border-top-black-10 row p-2">
                   <span className="text-success-100 col-12"> Total Budget</span>
                   <span className="text-black"> 2,000,000.0 </span>
                 </div>
@@ -122,7 +122,7 @@ const DashboardData = () => {
                     <i className="icon-open_in_new"></i>
                   </span>
                 </div>
-                <div className="mid p-1">
+                <div className="mid p-2">
                   <p className="text-black-60 fs-12px">Provisioned Budget</p>
                   <span className="fw-600">0</span>
                   <p className="text-black-60 fs-12px">Released Budget</p>
@@ -130,7 +130,7 @@ const DashboardData = () => {
                   <p className="text-black-60 fs-12px">Prev. Year Balance</p>
                   <span className="fw-600">2,0</span>
                 </div>
-                <div className="bottom border-top-black-10 row p-1">
+                <div className="bottom border-top-black-10 row p-2">
                   <span className="text-success-100 col-12"> Total Budget</span>
                   <span className="text-black"> 2,000,000.0 </span>
                 </div>
@@ -144,7 +144,7 @@ const DashboardData = () => {
                     <i className="icon-open_in_new"></i>
                   </span>
                 </div>
-                <div className="mid p-1">
+                <div className="mid p-2">
                   <p className="text-black-60 fs-12px">Provisioned Budget</p>
                   <span className="fw-600">0</span>
                   <p className="text-black-60 fs-12px">Released Budget</p>
@@ -152,7 +152,7 @@ const DashboardData = () => {
                   <p className="text-black-60 fs-12px">Prev. Year Balance</p>
                   <span className="fw-600">2,0</span>
                 </div>
-                <div className="bottom border-top-black-10 row p-1">
+                <div className="bottom border-top-black-10 row p-2">
                   <span className="text-success-100 col-12"> Total Budget</span>
                   <span className="text-black"> 2,000,000.0 </span>
                 </div>
