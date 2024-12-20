@@ -29,7 +29,7 @@ const DashboardData = () => {
             <div className="col-4 p-2">
               <div className="d-flex rounded-2 flex-column bg-white justify-content-between h-100  box-shadow">
                 <div className="bg-success-100 border-radius-t8px py-2 px-3 text-white d-flex justify-content-between a;ogm-items-center">
-                  <span>Heading here </span>
+                  <span>Scheme Budget </span>
                   <span>
                     <i className="icon-open_in_new"></i>
                   </span>
@@ -199,7 +199,7 @@ const DashboardData = () => {
           <div className="col-12 p-2">
             <div className="d-flex  box-shadow rounded-2 flex-column bg-white justify-content-between h-100">
               <div className="bg-prime-100 border-radius-t8px py-2 px-3 text-white d-flex justify-content-between a;ogm-items-center">
-                <span>Scheme Budget </span>
+                <span>Heading here </span>
                 <span>
                   <i className="icon-open_in_new"></i>
                 </span>
