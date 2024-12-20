@@ -38,15 +38,35 @@ body{
 .bg-secondary-100{
   background: var(--secondary-100-color);
 }
-
+.bg-black-10{
+  background: var(--black-10-color);
+}
+.bg-success-100{
+  background: var(--success-100-color);
+}
+.bg-prime-100{
+  background: var(--prime-100-color);
+}
+.bg-success-20{
+  background: var(--success-20-color);
+}
+.bg-warning-20{
+  background: var(--warning-20-color);
+}
 .fs-12px{
     font-size: 12px;
 }
 .fs-14px{
     font-size: 14px;
 }
+.fs-20px{
+    font-size: 20px;
+}
 .fw-600{
     font-weight: 600;
+}
+.fw-500{
+    font-weight: 500;
 }
 .h-60px{
     height: 60px;
@@ -54,7 +74,9 @@ body{
 .active{
     background-color: var(--secondary-100-color);
 }
-
+.text-success-100{
+    color: var(--success-100-color);
+}
 .cursor-pointer{
     cursor: pointer;
 }
@@ -71,6 +93,10 @@ body{
   padding: 12px 20px !important;
 }
 
+.border-top-black-10{
+  border-top: 1px solid var(--black-10-color);
+}
+
 .rounded-8px{
   border-radius: 8px;
 }
@@ -81,6 +107,16 @@ body{
 
 .bg-prime-20-hover:hover{
   background: var(--prime-20-color);
+}
+
+.border-radius-t8px{
+  border-radius: 8px 8px 0px 0px;
+}
+.text-black-60{
+  color: var(--black-60-color);
+}
+.box-shadow{
+  box-shadow: 0 10px 14px #00000026;
 }
 
 /* ====================submenu css==================== */

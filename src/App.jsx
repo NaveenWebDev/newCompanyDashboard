@@ -27,7 +27,7 @@ export default App;
 const data = [
   {
     id: 1,
-    value: "Dashboard",
+    value: <DashboardData></DashboardData>,
     path:"/"
   },
   {

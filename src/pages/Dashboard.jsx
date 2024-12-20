@@ -10,7 +10,7 @@ const Dashboard = ({children}) => {
   }
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden" >
       <div className="row overflow-hidden" style={{ height: "100vh" }}>
 
         <div
@@ -19,11 +19,11 @@ const Dashboard = ({children}) => {
           <Sidebar menu={menu} />
         </div>
 
-        <div className={` ${menu?"col-10":"col-11"} transition`} style={{background:"#f1f1f1"}}>
+        <div className={` ${menu?"col-10":"col-11"} transition black-40`} style={{background:"#F1F1F1"}} >
           <Navbar setNavbarMenuValue={setNavbarMenuValue}/>
 
-          <main className="p-3" style={{height:"92%"}}>
-              <div className="bg-white h-100 rounded-3 p-2">
+          <main className="p-3 mb-2" style={{height:"92%"}}>
+              <div className=" h-100 rounded-3 p-2 overflow-auto">
                 {children}
               </div>
           </main>
