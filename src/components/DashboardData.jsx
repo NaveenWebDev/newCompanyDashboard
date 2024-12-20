@@ -2,7 +2,7 @@ import React from "react";
 
 const DashboardData = () => {
   return (
-    <div className="py-2" style={{ background: "#f1f1f1" }}>
+    <div className="py-2"  style={{ background: "#f1f1f1"}}>
       <div className="d-flex justify-content-between align-items-center">
         <div>
           <h2 className="fs-20px">
@@ -172,7 +172,8 @@ const DashboardData = () => {
                   </span>
                 </div>
 
-                <div className="p-3">content  is thelhlka Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero pariatur sit nostrum eos labore adipisci fugiat deleniti, dolore maiores similique enim officiis optio, ut eligendi, velit omnis. Magni, impedit ullam?</div>
+                <div className="p-3"> content 
+                </div>
               </div>
             </div>
 

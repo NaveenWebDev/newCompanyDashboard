@@ -22,7 +22,7 @@ const Dashboard = ({children}) => {
         <div className={` ${menu?"col-10":"col-11"} transition black-40`} style={{background:"#F1F1F1"}} >
           <Navbar setNavbarMenuValue={setNavbarMenuValue}/>
 
-          <main className="p-3 mb-2" style={{height:"92%"}}>
+          <main className="p-3" style={{height:"100vh"}}>
               <div className=" h-100 rounded-3 p-2 overflow-auto">
                 {children}
               </div>
