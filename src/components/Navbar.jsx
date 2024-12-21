@@ -52,7 +52,7 @@ const Navbar = ({ setNavbarMenuValue }) => {
         <div className="d-flex gap-4 align-items-center">
 
         <i className="icon-assignment cursor-pointer fs-5 text-white"></i>
-        <i className="icon-notifications_none cursor-pointer transition fs-5 p-2 text-prime-100 rounded-8px bg-prime-20-hover" onClick={handleClick}></i>
+        <i className="icon-notifications_none cursor-pointer transition fs-5 p-2 text-prime-100 rounded-8px bg-prime-20" onClick={handleClick}></i>
 
           <Dropdown onSelect={handleDropdownSelect}>
             <Dropdown.Toggle
