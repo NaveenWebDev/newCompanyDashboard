@@ -14,9 +14,10 @@ const Dashboard = ({children}) => {
       <div className="row overflow-hidden" style={{ height: "100vh" }}>
 
         <div
-          className={` ${menu? "col-2": "col-1"} border top-0 transition `}
+          className={` ${menu? "col-2": "col-1"} border position-sticky z-index-100 transition`}
         >
           <Sidebar menu={menu} />
+
         </div>
 
         <div className={` ${menu?"col-10":"col-11"}  transition black-40`} style={{background:"#F1F1F1"}} >
@@ -28,6 +29,7 @@ const Dashboard = ({children}) => {
               </div>
           </main>
         </div>
+
       </div>
     </div>
   );

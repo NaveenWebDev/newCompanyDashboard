@@ -1,20 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { createTransitions } from "@mui/material/styles";
 
 const Sidebar = ({ menu }) => {
   const location = useLocation();
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const submenuRefs = useRef({});
-
+  const navigate = useNavigate();
   const handleSubmenuToggle = (id) => {
     setOpenSubmenu(openSubmenu === id ? null : id);
   };
 
-  useEffect(()=>{
-    if(menu === false){
-      setOpenSubmenu(null)
+  useEffect(() => {
+    if (menu === false) {
+      setOpenSubmenu(null);
     }
-  },[menu])
+  }, [menu]);
 
   useEffect(() => {
     Object.keys(submenuRefs.current).forEach((key) => {
@@ -28,7 +29,7 @@ const Sidebar = ({ menu }) => {
   }, [openSubmenu]);
 
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh" }} className={` ${openSubmenu? "overflow-auto": null} `} >
       {/* Header */}
       <div className="d-flex h-60px justify-content-center align-items-center gap-8px pxy border-bottom">
         <img src="/logo.svg" alt="" height="36px" width="35px" />
@@ -41,7 +42,7 @@ const Sidebar = ({ menu }) => {
 
       {/* Menu Items */}
       <div
-        className="menu overflow-auto"
+        className="menu position-relative"
         style={{ height: "calc(100% - 60px)" }}
       >
         {data.map((item) => (
@@ -49,19 +50,26 @@ const Sidebar = ({ menu }) => {
             {/* Main Menu */}
             <Link
               to={item.path}
-              className={`d-flex gap-8px justify-content-center align-items-center pxy cursor-pointer text-decoration-none position-relative ${
+              className={`d-flex gap-8px justify-content-center align-items-center pxy cursor-pointer text-decoration-none menuhover position-relative border ${
                 location.pathname === item?.path
                   ? "active text-white"
                   : "text-black hover-link"
               }`}
-              onClick={!menu ? null : () => item?.submenu && handleSubmenuToggle(item?.id)}
+              onClick={
+                !menu
+                  ? null
+                  : () => item?.submenu && handleSubmenuToggle(item?.id)
+              }
             >
               <span>{item?.icon}</span>
               {menu && (
                 <span className="flex-grow-1 fs-14px">{item?.value}</span>
               )}
+
               {item?.submenu && (
-                <span className={`${!menu?"position-absolute end-0 pe-2":null}`}>
+                <span
+                  className={`${!menu ? "position-absolute end-0 pe-2" : null}`}
+                >
                   {openSubmenu === item?.id ? (
                     <i className="icon-arrow_drop_down fs-5"></i>
                   ) : (
@@ -70,21 +78,47 @@ const Sidebar = ({ menu }) => {
                 </span>
               )}
 
-              {/* <div className="collapse-menu">
-                sub menu
-              </div> */}
+              {/* ===================================collapse-menu================================= */}
 
+              {item?.submenu && !menu && (
+                <ul className="collapse-menu list-unstyled">
+                  {item.submenu.map((sub) => (
+                    <li
+                      key={sub?.id}
+                      className={`border-bottom p-3rem fs-14px text-black
+                        ${
+                          location.pathname.includes(`${item?.path}/${sub?.id}`)
+                            ? "bg-secondary-100 text-white"
+                            : "text-black hover-link"
+                        }
+                      `}
+                      
+                    >
+                      <Link
+                        to={`${item?.path}/${sub.id}`}
+                        className={`text-decoration-none fs-14px pxy ${location.pathname.includes(`${item?.path}/${sub?.id}`)
+                        ? "text-white" : "text-black"}
+                         } `}
+                      >
+                        {sub?.value}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </Link>
 
-            {/* Submenu */}
+            {/*============================================= Submenu==================================== */}
             {item.submenu && (
               <ul
-                className={`submenu list-unstyled  pb-2 ${openSubmenu !== item.id?"d-none":null}`}
+                className={`submenu list-unstyled pb-2 ${
+                  openSubmenu !== item.id ? "d-none" : null
+                }`}
                 ref={(el) => (submenuRefs.current[item?.id] = el)}
               >
-                {item.submenu && 
+                {item.submenu &&
                   item.submenu.map((sub) => (
-                    <li key={sub?.id} >
+                    <li key={sub?.id}>
                       <Link
                         to={`${item?.path}/${sub.id}`}
                         className={`text-decoration-none fs-14px pxy ${
@@ -121,9 +155,13 @@ const data = [
     value: "Department",
     path: "/department-mgmt",
     submenu: [
-      { id: 1, value: "Department", path:"department-mgmt/1" },
-      { id: 2, value: "Child Band Account", path:"department-mgmt/2" },
-      { id: 3, value: "Child Schema Band Account mapping", path:"department-mgmt/3"  },
+      { id: 1, value: "Department", path: "department-mgmt/1" },
+      { id: 2, value: "Child Band Account", path: "department-mgmt/2" },
+      {
+        id: 3,
+        value: "Child Schema Band Account mapping",
+        path: "department-mgmt/3",
+      },
     ],
   },
   {
