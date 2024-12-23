@@ -50,7 +50,7 @@ const Sidebar = ({ menu }) => {
             {/* Main Menu */}
             <Link
               to={item.path}
-              className={`d-flex gap-8px justify-content-center align-items-center pxy cursor-pointer text-decoration-none menuhover position-relative border ${
+              className={`d-flex gap-8px justify-content-center align-items-center pxy cursor-pointer text-decoration-none menuhover position-relative ${
                 location.pathname === item?.path
                   ? "active text-white"
                   : "text-black hover-link"
@@ -85,10 +85,10 @@ const Sidebar = ({ menu }) => {
                   {item.submenu.map((sub) => (
                     <li
                       key={sub?.id}
-                      className={`border-bottom p-3rem fs-14px text-black
+                      className={`p-3rem fs-14px text-black border-bottom
                         ${
                           location.pathname.includes(`${item?.path}/${sub?.id}`)
-                            ? "bg-secondary-100 text-white"
+                            ? "bg-secondary-100 text-white "
                             : "text-black hover-link"
                         }
                       `}
@@ -96,7 +96,7 @@ const Sidebar = ({ menu }) => {
                     >
                       <Link
                         to={`${item?.path}/${sub.id}`}
-                        className={`text-decoration-none fs-14px pxy ${location.pathname.includes(`${item?.path}/${sub?.id}`)
+                        className={`text-decoration-none fs-14px ${location.pathname.includes(`${item?.path}/${sub?.id}`)
                         ? "text-white" : "text-black"}
                          } `}
                       >

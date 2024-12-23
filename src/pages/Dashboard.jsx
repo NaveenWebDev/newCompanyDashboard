@@ -11,7 +11,7 @@ const Dashboard = ({children}) => {
 
   return (
     <div className="overflow-x-hidden" >
-      <div className="row overflow-hidden" style={{ height: "100vh" }}>
+      <div className={`row ${menu?"overflow-hidden":null} `} style={{ height: "100vh" }}>
 
         <div
           className={` ${menu? "col-2": "col-1"} border position-sticky z-index-100 transition`}
