@@ -51,7 +51,7 @@ const Sidebar = ({ menu }) => {
             <Link
               to={item.path}
               className={`d-flex gap-8px justify-content-center align-items-center pxy cursor-pointer text-decoration-none menuhover position-relative ${
-                location.pathname === item?.path
+                ("/" + location.pathname.split("/")[1]) === (item?.path) 
                   ? "active text-white"
                   : "text-black hover-link"
               }`}
@@ -85,10 +85,10 @@ const Sidebar = ({ menu }) => {
                   {item.submenu.map((sub) => (
                     <li
                       key={sub?.id}
-                      className={`p-3rem fs-14px text-black border-bottom
+                      className={`fs-14px text-black border-bottom
                         ${
                           location.pathname.includes(`${item?.path}/${sub?.id}`)
-                            ? "bg-secondary-100 text-white "
+                            ? "text-black border-l-3px"
                             : "text-black hover-link"
                         }
                       `}
@@ -96,8 +96,8 @@ const Sidebar = ({ menu }) => {
                     >
                       <Link
                         to={`${item?.path}/${sub.id}`}
-                        className={`text-decoration-none fs-14px ${location.pathname.includes(`${item?.path}/${sub?.id}`)
-                        ? "text-white" : "text-black"}
+                        className={`p-3rem text-decoration-none d-block fs-14px ${location.pathname.includes(`${item?.path}/${sub?.id}`)
+                        ? "text-black border-l-3px" : "text-black"}
                          } `}
                       >
                         {sub?.value}
@@ -123,7 +123,7 @@ const Sidebar = ({ menu }) => {
                         to={`${item?.path}/${sub.id}`}
                         className={`text-decoration-none fs-14px pxy ${
                           location.pathname.includes(`${item?.path}/${sub?.id}`)
-                            ? "bg-secondary-100 text-white"
+                            ? "border-l-3px text-black"
                             : "text-black hover-link"
                         }`}
                       >

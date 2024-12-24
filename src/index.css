@@ -121,7 +121,7 @@ body{
 .text-black-60{
   color: var(--black-60-color);
 }
-.box-shadow{
+.box-shadow:hover{
   box-shadow: 0 10px 14px #00000026;
 }
 
@@ -169,4 +169,7 @@ body{
 }
 .menuhover:hover .collapse-menu {
   display: inline-block;
+}
+.border-l-3px{
+  border-left: 3px solid var(--prime-100-color);
 }

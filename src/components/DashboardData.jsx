@@ -27,7 +27,7 @@ const DashboardData = () => {
         <div className="col-9">
           <div className="row">
             <div className="col-4 p-2">
-              <div className="d-flex rounded-2 flex-column bg-white justify-content-between h-100  box-shadow">
+              <div className="d-flex rounded-2 flex-column bg-white justify-content-between h-100  box-shadow transition">
                 <div className="bg-success-100 border-radius-t8px py-2 px-3 text-white d-flex justify-content-between a;ogm-items-center">
                   <span>Scheme Budget </span>
                   <span>
@@ -196,7 +196,7 @@ const DashboardData = () => {
 
         <div className="col-3">
           <div className="col-12 p-2">
-            <div className="d-flex  box-shadow rounded-2 flex-column bg-white justify-content-between h-100">
+            <div className="d-flex transition box-shadow rounded-2 flex-column bg-white justify-content-between h-100 ">
               <div className="bg-prime-100 border-radius-t8px py-2 px-3 text-white d-flex justify-content-between a;ogm-items-center">
                 <span>Heading here </span>
                 <span>
